@@ -15,16 +15,16 @@ import lombok.extern.log4j.Log4j;
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 @Log4j
 public class SampleTests {
-//	@Setter(onMethod_ = {@Autowired})
+	@Setter(onMethod_ = {@Autowired})
 	private Restaurant restaurent; 
 	
 	@Test
 	public void testExtist() {
 		assertNotNull(restaurent); 
 		
-//		log.info(restaurent); //왜 에러나는지 모르겠음 p.62
-//		log.info("----------------");
-//		log.info(restaurent.getChef()); 
+		log.info(restaurent); 
+		log.info("----------------");
+		log.info(restaurent.getChef()); 
 		
 	}
 }
